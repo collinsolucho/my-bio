@@ -79,6 +79,28 @@ Make sure to deploy the output of `npm run build`
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
+## Project Structure
+
+This application is a personal portfolio built with React Router, showcasing various projects and skills. The project is organized as follows:
+
+- `app/`: Main application code
+  - `root.jsx`: Root component that wraps the entire application
+  - `routes.js`: Central route definitions
+  - `routes/`: Individual page components
+    - `home.jsx`: Home page showcasing featured projects
+    - `about.jsx`: About page with personal information
+    - `contact.jsx`: Contact page for getting in touch
+  - `components/`: Reusable UI components
+    - `components.jsx`: Shared component definitions
+  - `model/`: Data handling layer
+    - `database.js`: Database interaction utilities
+  - `welcome/`: Welcome section components and assets
+    - `welcome.jsx`: Welcome component
+    - `logo-dark.svg` & `logo-light.svg`: Logo variants for different themes
+- `public/`: Static assets
+  - `images/`: Portfolio project images including e-commerce, hero banner, logo, movies app, payments, personal photo, to-do list, and weather app screenshots
+- Configuration files: `package.json` (dependencies), `vite.config.js` (build tool), `react-router.config.js` (routing config), `Dockerfile` (containerization), and more
+
 ---
 
 Built with ❤️ using React Router.
