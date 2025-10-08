@@ -41,12 +41,12 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
-                <Link
-                  to="/projects"
+                <a
+                  href="#projects"
                   className="px-6 py-3 bg-gradient-to-r from-[#1a2a6c] via-[#b21f1f] to-[#fdbb2d] text-white font-semibold rounded-lg hover:opacity-90 transition"
                 >
                   View My Work
-                </Link>
+                </a>
 
                 <Link
                   to="https://github.com/collinsolucho"
@@ -74,7 +74,7 @@ export default function Home() {
           I’m a Full Stack Developer skilled in the following tools and
           technologies:
         </p>
-        <div className="grid md:grid-cols-2 lg:flex md:gap-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-3">
           <Skills
             title="FrontEnd"
             tools={[
@@ -108,20 +108,27 @@ export default function Home() {
               "Animation & Storytelling",
             ]}
           />
+          <Skills title="Automation & Workflow" tools={["Vibe Coding"]} />
         </div>
       </section>
 
       {/* === PROJECTS SECTION === */}
-      <section className="py-10 md:max-w-5xl md:mx-auto">
-        <h2 className="text-center text-2xl md:text-3xl font-semibold mb-6 text-amber-400">
+      <section className="py-10 md:max-w-5xl md:mx-auto" id="projects">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-6 text-amber-400">
           Some of My Works
         </h2>
-        <div className="p-4 grid md:grid-cols-2 gap-3 lg:flex">
+        <div className="p-4 grid md:grid-cols-2 gap-3 lg:grid-cols-4">
           <ProjectCard
             imgSrc="/images/e-commerce.png"
             title="E-commerce Platform"
             description="Full-featured online store with cart, payments, and authentication."
             href="https://collins-edu-mart.vercel.app/"
+          />
+          <ProjectCard
+            imgSrc="/images/movies.png"
+            title="Movies & Shows App"
+            description="Modern movie and shows app featuring search, trending titles, and detailed previews — built with React and Tailwind CSS for a fast, responsive experience"
+            href="https://movie-shows-lime.vercel.app/"
           />
           <ProjectCard
             imgSrc="/images/to-do.png"
@@ -134,6 +141,12 @@ export default function Home() {
             title="Weather Tracker"
             description="Weather web app helping users plan their day with real-time forecasts."
             href="https://weather-api-ten-xi.vercel.app/"
+          />
+          <ProjectCard
+            imgSrc="/images/vibecoding.png"
+            title="vibe-coding with Ai"
+            description="AI-assisted movie app built with Vibe Coding — browse, search, and explore trending films in a clean responsive U."
+            href="https://movie-ai-puce.vercel.app/"
           />
         </div>
         <Link
