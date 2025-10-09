@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ProjectCard, Skills } from "../components/components";
-
+// import { motion } from "framer-motion";
 export function meta() {
   return [
     { title: "Personal Portfolio" },
@@ -12,6 +12,14 @@ export default function Home() {
   return (
     <main className="text-gray-200 bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364]">
       {/* === HERO SECTION === */}
+      {/* <motion.h1
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-4xl font-bold text-amber-400"
+      >
+        Welcome to My Page
+      </motion.h1> */}
       <section
         className="relative text-center md:text-left py-16 px-6 flex flex-col justify-center items-center md:items-start bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero.png')" }}
@@ -147,6 +155,12 @@ export default function Home() {
             title="vibe-coding with Ai"
             description="AI-assisted movie app built with Vibe Coding — browse, search, and explore trending films in a clean responsive U."
             href="https://movie-ai-puce.vercel.app/"
+          />
+          <ProjectCard
+            imgSrc="/images/payments.png"
+            title="M-PESA Online Payments Integration"
+            description="A real-time payment integration built with M-PESA Daraja API — enabling users to send and receive mobile payments securely through a modern web interface."
+            href="https://online-payments-pctp.vercel.app/"
           />
         </div>
         <Link

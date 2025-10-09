@@ -8,15 +8,15 @@ export default function About() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] text-white py-16 px-6">
       {/* === PROFILE SECTION === */}
-      <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <section className="max-w-5xl mx-auto rounded-b-2xl grid md:grid-cols-2 gap-10 items-center bg-slate-900 md:pr-4 pb-7">
         <img
           src="/images/photo.jpg"
           alt="Collins Olucho"
-          className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full border-4 border-amber-400 shadow-2xl object-cover hover:scale-105 transition-transform duration-300 mt-4"
+          className="w-50 h-50  mx-auto rounded-full border-4 border-amber-400  object-cover hover:scale-105 transition-transform duration-300 mt-4"
         />
 
         <div className="text-center md:text-left space-y-4">
-          <h2 className="text-3xl font-bold text-amber-300">About Me</h2>
+          <h2 className="text-3xl font-bold text-amber-300 mt-4">About Me</h2>
           <p className="text-gray-300 text-lg leading-relaxed">
             Educator • Full Stack Developer • UI/UX Enthusiast
           </p>
@@ -64,7 +64,6 @@ export default function About() {
 
       {/* === ABOUT SUMMARY === */}
       <section className="max-w-4xl mx-auto mt-20 text-center space-y-6">
-        <h2 className="text-3xl font-bold text-amber-400">About Me</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
           I’m a passionate developer and ICT educator with a strong interest in
           full-stack development, networking, and user experience design. My
