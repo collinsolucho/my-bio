@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { ProjectCard, Skills } from "../components/components";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 export function meta() {
   return [
     { title: "Personal Portfolio" },
@@ -12,42 +12,42 @@ export default function Home() {
   return (
     <main className="text-gray-200 bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364]">
       {/* === HERO SECTION === */}
-      {/* <motion.h1
-        initial={{ x: -200, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="text-4xl font-bold text-amber-400"
-      >
-        Welcome to My Page
-      </motion.h1> */}
+
       <section
         className="relative text-center md:text-left py-16 px-6 flex flex-col justify-center items-center md:items-start bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/hero.png')" }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
-
+        <motion.h1
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 50 }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+            repeat: 20,
+            repeatType: "loop", // moves back and forth
+          }}
+          className="text-4xl md:text-5xl font-bold text-amber-400 mb-4 drop-shadow-lg bg-gray-50 p-2 "
+        >
+          Welcome
+        </motion.h1>
         <div className="relative z-10 max-w-4xl ld:max-w-5xl lg:mx-auto">
           <h1 className="font-extrabold text-5xl md:text-6xl bg-gradient-to-r from-blue-700 via-purple-950 to-pink-600 bg-clip-text text-transparent drop-shadow-2xl">
-            I’m Collins Olucho
+            Hi, I’m Collins
           </h1>
 
           <p className="mt-3 text-lg md:text-xl text-gray-200 tracking-wide">
-            Full Stack Developer • ICT Educator • Lifelong Learner • Aspiring
-            UX/UI Designer
+            Full Stack Developer
           </p>
 
           <div className="flex flex-col md:flex-row items-center gap-6 mt-8">
             <div className="md:w-2/3 text-center md:text-left space-y-4 lg:border-r-4 border-amber-600 lg:p-2">
               <p className="text-lg text-gray-100 leading-relaxed">
-                I’m an ICT teacher and full-stack developer passionate about
-                creating engaging digital experiences and inspiring young minds
-                through technology. Based in{" "}
-                <span className="text-amber-300 font-semibold">Eldoret</span>, I
-                merge teaching with hands-on software development to make
-                learning interactive and practical.
+                I craft user-focused digital solutions and help learners
+                understand the technology behind them. My work blends
+                engineering, creativity, and clear communication.
               </p>
-
               <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
                 <a
                   href="#projects"
@@ -55,7 +55,6 @@ export default function Home() {
                 >
                   View My Work
                 </a>
-
                 <Link
                   to="https://github.com/collinsolucho"
                   target="_blank"
@@ -63,8 +62,8 @@ export default function Home() {
                   className="px-6 py-3 rounded-lg bg-gradient-to-r from-[#1a2a6c] via-[#b21f1f] to-[#fdbb2d] text-white font-semibold hover:opacity-90 transition"
                 >
                   GitHub
-                </Link>
-              </div>
+                </Link>{" "}
+              </div>{" "}
             </div>
 
             <img
